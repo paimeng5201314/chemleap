@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cn.labchronicles.chemleap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "producer": "派蒙",
-  "gameSourceSnapshotId": "sha256:6a909c33279cdb6b4f309ad4d8929dbf5ca4ce003793f5b9e6b4a60747d00f08",
+  "gameSourceSnapshotId": "sha256:0ec4ef9a8731bf15d26bb23e8d17d25107157c3eb5fa7f8f48b6153f3e060fb3",
   "files": [
     {
       "path": "samples/chemleap/autumn-sdk.js",
@@ -28,12 +28,12 @@
     {
       "path": "samples/chemleap/index.html",
       "bytes": 6317,
-      "sha256": "dddafad83bbeb3869ad723a8f548958de86833bae7384b2b4ab80ca90642eaea"
+      "sha256": "afe77cc3ffb9b6197130171ca6d124f05ad13ea93ad488ed1832809ed0c867b1"
     },
     {
       "path": "samples/chemleap/manifest.json",
       "bytes": 426,
-      "sha256": "9ec188c197613c09f3dfe2ded2588cfcffb777d7159ac0f61de2015bae11bd38"
+      "sha256": "e94ed8e6b4b4df769a0a4820ffbd5734fbb84c807ab8cbaf80e083972110645f"
     },
     {
       "path": "samples/chemleap/model.js",

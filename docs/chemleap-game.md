@@ -1,6 +1,6 @@
 # ChemLeap · 3D 化学跳一跳
 
-制作人：派蒙。游戏版本0.1.0，应用ID `cn.labchronicles.chemleap`，AutumnOS SDK0.3.0，存档格式1。
+制作人：派蒙。游戏版本0.1.1，应用ID `cn.labchronicles.chemleap`，AutumnOS SDK0.3.0，存档格式1。0.1.1统一包内版本标记及发布说明，保留原有玩法和存档格式；宿主隔离实现不在游戏包中，普通启动的实际验证边界见接入说明。
 
 ## 实现方案与项目结构
 
@@ -15,9 +15,13 @@ samples/chemleap/
   model.js         纯逻辑状态机、平台生成、跳跃结算和存档验证
   renderer.js      无依赖WebGL三维渲染、选取、上下文恢复
   game.js          输入、动画计时、UI、生命周期与SDK存档
-  autumn-sdk.js    固定SDK 0.3.0副本
+  autumn-sdk.js    与根sdk/字节一致的固定SDK副本
 tests/
   chemleap-model-tests.cjs
+  chemleap-browser-tests.cjs
+scripts/
+  Package-ChemLeap.ps1
+  Test-ChemLeapNativeSmoke.ps1
 ```
 
 `chemistry.js`与`model.js`同时支持浏览器global与Node CommonJS，便于在无界面的自动测试中使用同一份生产逻辑。没有把测试替身编入游戏。渲染、输入和反应模型分别维护；RAF由控制器统一管理，渲染器不另开定时循环。
@@ -86,8 +90,17 @@ const result = ChemLeapModel.land(state);
 
 存档包含物质、得分、最高分、轮次、种子、选择与最多32条历史。读取严格核对格式、值域、分数/轮次关系、历史反应和真实生成物；平台根据种子重建，不相信存档自报的平台。非法或未来格式不改变当前局面。跳跃期间UI禁用保存与读取，模型的序列化也不会提前结算。
 
-## 开发与验证
+## 构建、打包与测试
 
-游戏无 npm 运行依赖，无需前端构建。模型测试执行 `node --test tests/chemleap-model-tests.cjs`，浏览器预览命令见根 README。用兼容 AutumnOS 开发者工具选择项目目录或现有 `.autumn` 包进行校验和内部预览。
+无游戏npm依赖，无需前端构建。浏览器可通过任何只读本地HTTP服务打开此目录；宿主直接打包资源。
 
-独立仓库不包含宿主解决方案与仅适用于宿主工作区的自动化脚本。实际完成的模型、浏览器和原生测试范围见 [测试记录](TESTING.md)，打包与商店约束见 [接入说明](chemleap-integration.md)。开发预览不等于普通商店运行验收通过。
+```powershell
+node --test tests/chemleap-model-tests.cjs
+node tests/chemleap-browser-tests.cjs --report '<全新报告目录>'
+./scripts/Package-ChemLeap.ps1 -OutputDirectory '<全新发布材料目录>'
+./scripts/Test-ChemLeapNativeSmoke.ps1 -ExecutablePath '<本轮完整发行目录>/AutumnOS.exe' -GameProjectPath '<工作根>/samples/chemleap' -ReportDirectory '<全新报告目录>'
+```
+
+浏览器测试复用工作区现有锁定Playwright；默认本机Headless Chromium路径可由`PLAYWRIGHT_CHROMIUM_EXECUTABLE`覆盖，使用启用sandbox的ANGLE SwiftShader软件WebGL，不冒充硬件GPU/物理触屏验收。模型50项包含48,000组种子平台和500次连续反应。原生脚本使用交付CLI校验并打包真实项目，再通过GUI启用开发模式、确认内部预览、实际跳跃及SDK权限存读档；结果以本轮报告为准。首次自动文件夹选择驱动失败保留，不计为游戏测试通过。
+
+`Package-ChemLeap.ps1`按实际manifest版本输出`publication/ChemLeap-0.1.1.autumn`、`autumn.store.json`、`autumn.release.json`，复用宿主CLI验证三层一致，并逐个ZIP条目读回SHA-256。它只准备本地文件。仓库上架、公开下载及普通社区运行的状态见`docs/chemleap-integration.md`与`AUTUMNOS_PROGRESS.md`；不把开发预览当作公开商店运行通过。
