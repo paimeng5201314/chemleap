@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "appId": "cn.labchronicles.chemleap",
+  "version": "0.1.0",
+  "channel": "stable",
+  "runtime": "web",
+  "minHostVersion": "0.5.1-local.8",
+  "minSdkVersion": "0.3.0",
+  "entry": "index.html",
+  "asset": "ChemLeap-0.1.0.autumn",
+  "bytes": 28872,
+  "sha256": "3a9f2f4e977e7adafec424df3223e19e3ddb5a7f14ce1c0005c88212552e8598",
+  "permissions": [
+    "saves"
+  ],
+  "saveFormatVersion": 1
+}

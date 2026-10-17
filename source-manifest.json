@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "appId": "cn.labchronicles.chemleap",
+  "version": "0.1.0",
+  "producer": "派蒙",
+  "gameSourceSnapshotId": "sha256:6a909c33279cdb6b4f309ad4d8929dbf5ca4ce003793f5b9e6b4a60747d00f08",
+  "files": [
+    {
+      "path": "samples/chemleap/autumn-sdk.js",
+      "bytes": 11671,
+      "sha256": "03787d8434476a80f9be0174ba584f0a1260653e5c4c306dd6dd2f862447168c"
+    },
+    {
+      "path": "samples/chemleap/chemistry.js",
+      "bytes": 6096,
+      "sha256": "223e1e2a471c2a49fbcd189403d5bef1bea005a3570a40b0de8f872e1dd56bfa"
+    },
+    {
+      "path": "samples/chemleap/game.css",
+      "bytes": 10243,
+      "sha256": "a8894a9b9f176d6f5cb635f46dae9ca69afc246324ca50cf0d035113c303f95b"
+    },
+    {
+      "path": "samples/chemleap/game.js",
+      "bytes": 16045,
+      "sha256": "e3d301b6586621f5ad0ded95f32071d637dedaa0a0389f688dd9289a2119cab0"
+    },
+    {
+      "path": "samples/chemleap/index.html",
+      "bytes": 6317,
+      "sha256": "dddafad83bbeb3869ad723a8f548958de86833bae7384b2b4ab80ca90642eaea"
+    },
+    {
+      "path": "samples/chemleap/manifest.json",
+      "bytes": 426,
+      "sha256": "9ec188c197613c09f3dfe2ded2588cfcffb777d7159ac0f61de2015bae11bd38"
+    },
+    {
+      "path": "samples/chemleap/model.js",
+      "bytes": 9691,
+      "sha256": "65bbe3722e1b039dfa9d3557bddabee154556f2eaab193c584020b74d1ca278d"
+    },
+    {
+      "path": "samples/chemleap/renderer.js",
+      "bytes": 24385,
+      "sha256": "6026c5766ea6df6e3ff552d9135b5458601e722ae11b64c63af00db63d260679"
+    }
+  ]
+}

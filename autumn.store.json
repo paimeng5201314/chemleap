@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "appId": "cn.labchronicles.chemleap",
+  "name": "ChemLeap · 化学跳一跳",
+  "description": "从 H₂ 出发的 3D 化学跳一跳：选择反应平台、蓄力跳跃、收集生成物并挑战最高分。离线可玩，支持 AutumnOS 存档。",
+  "category": "sq",
+  "developer": {
+    "name": "派蒙",
+    "url": null
+  },
+  "screenshots": [
+    "https://raw.githubusercontent.com/paimeng5201314/chemleap/main/media/gameplay.png"
+  ],
+  "offlineCapable": true
+}

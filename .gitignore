@@ -1,0 +1,14 @@
+node_modules/
+AutumnOS_Data/
+artifacts/
+reports/
+bin/
+obj/
+.env
+.env.*
+*.log
+*.key
+*.pfx
+*.p12
+Thumbs.db
+.DS_Store
