@@ -8,7 +8,7 @@
 
 ## 下载与 AutumnOS 内部试玩
 
-[下载 ChemLeap-0.1.0.autumn](https://raw.githubusercontent.com/paimeng5201314/chemleap/main/dist/ChemLeap-0.1.0.autumn)（28,872 字节）。这是 AutumnOS 内部应用包，需要兼容的 AutumnOS 客户端。
+[下载 ChemLeap-0.1.0.autumn](https://github.com/paimeng5201314/chemleap/releases/download/v0.1.0/ChemLeap-0.1.0.autumn)（28,872 字节）。这是 AutumnOS 内部应用包，需要兼容的 AutumnOS 客户端。
 
 1. 在 AutumnOS 设置中启用开发者模式，打开开发者工具。
 2. 使用“选择并检查 .autumn”选中下载的包，进入内部预览并确认。
@@ -16,7 +16,7 @@
 
 已验证的宿主内部版本为 `0.5.1-local.8`，SDK `0.3.0`。当前可玩路径是明确确认后的**开发者预览**；宿主普通社区启动的安全门禁仍保留。
 
-本仓库提供源码和包的直接下载。自动商店发现还需要仓库 Topics `autumnos-app`、`autumn-app-sq`，以及附有包和元数据的公开 GitHub Release；这些远端上架步骤尚未完成。仓库里的 `dist/` 文件不会自动变成 Release 附件。[接入与发布说明](docs/chemleap-integration.md)。
+游戏已公开发布为 [v0.1.0](https://github.com/paimeng5201314/chemleap/releases/tag/v0.1.0)，包含 `.autumn` 包、`autumn.release.json` 和 `SHA256SUMS` 三个附件；仓库已设置商店 Topics `autumnos-app`、`autumn-app-sq`。兼容 AutumnOS 可刷新商店搜索 ChemLeap，或通过“打开 GitHub 仓库”粘贴本仓库链接查看版本。普通社区运行仍遵循宿主安全门禁。[接入与发布说明](docs/chemleap-integration.md)。
 
 ## 本地开发
 

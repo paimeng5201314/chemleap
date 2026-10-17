@@ -21,4 +21,14 @@
 
 浏览器测试使用 Windows 的 Chromium Headless 和 ANGLE SwiftShader，Chromium sandbox 保持开启；这不是硬件 GPU、物理触屏或完整系统矩阵验收。宿主验证版本为内部 SemVer `0.5.1-local.8`，SDK `0.3.0`。
 
-普通社区启动、完整第三方网络隔离验收仍未完成；自动商店下载在缺少 Topics 和公开 Release 时为 `not_run`。干净系统/Windows 10、硬件 GPU、物理触屏、人工屏幕阅读器及长期稳定性为 `not_run`。这些结果不替代 AutumnOS 完整产品验收。
+普通社区启动、完整第三方网络隔离验收仍未完成；商店内完整安装/普通启动流程为 `not_run`，真实商店发现、版本资格与公开附件下载的本轮验证见下文。干净系统/Windows 10、硬件 GPU、物理触屏、人工屏幕阅读器及长期稳定性为 `not_run`。这些结果不替代 AutumnOS 完整产品验收。
+
+## 2026-10-17 GitHub 商店发布验证
+
+公开 Release `v0.1.0`（ID `415671030`）已发布，非 prerelease；三个独立附件均已匿名 HTTP 200 下载，大小和 SHA-256 与本地材料相同。实际下载材料再次通过官方 CLI 三层校验。仓库 Topics 为 `autumnos-app`、`autumn-app-sq`，根展示清单有效。
+
+- GitHub 实际 Topic 查询返回目标仓库：`total_count=1`、`incomplete_results=false`。
+- AutumnOS 真实生产适配器执行 `--probe-store`：`passed`，发现 1 个仓库，目标为 ChemLeap，分类 `Sq`。
+- 同一适配器执行 `--probe-store-repository paimeng5201314/chemleap`：`passed`，`installable_release_count=1`，`0.1.0` 的 `can_install=true`，`warnings=[]`。
+
+以上是实际远端发现、版本资格和附件下载验证，未把仓库源码 ZIP 当安装包，也未使用商店假数据。它们不表示完整商店 UI 安装/普通社区运行已通过，宿主既有安全门禁仍保留；游戏实际可玩证据继续对应同一字节包的内部开发者预览。

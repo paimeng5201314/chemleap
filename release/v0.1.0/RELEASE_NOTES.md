@@ -10,12 +10,6 @@ H₂ 起点、15 条平衡反应、每轮 3～6 个平台且保证有解；点�
 
 `ChemLeap-0.1.0.autumn`：28,872 字节，SHA-256 `3a9f2f4e977e7adafec424df3223e19e3ddb5a7f14ce1c0005c88212552e8598`。
 
-## 发布操作清单
+## 已公开发布
 
-本文件是待用说明，不代表 Release 已创建。当前 GitHub 连接没有 Release/Topics 写工具，因此只完成仓库文件上传。
-
-1. 创建标签 `v0.1.0`，目标选择上传后的 `main`，标题使用上方标题。
-2. 不勾选 prerelease；包版本 `0.1.0` 和 `channel=stable` 必须一致。
-3. 将仓库 `dist/` 中的 `ChemLeap-0.1.0.autumn`、`autumn.release.json` 作为同一 Release 的独立附件上传，可同时附 `SHA256SUMS`。GitHub 自动生成的源码 ZIP 不代替 `.autumn` 包。
-4. 发布前核对附件字节数与摘要。在仓库 About 中添加 Topics `autumnos-app` 和 `autumn-app-sq`。
-5. 公开后重新核验 AutumnOS 实际发现、元数据、下载与校验。普通运行仍按宿主安全状态处理。
+[GitHub Release v0.1.0](https://github.com/paimeng5201314/chemleap/releases/tag/v0.1.0) 已于 2026-10-17 公开，非 prerelease，Release ID `415671030`。三个附件为 `ChemLeap-0.1.0.autumn`、`autumn.release.json`、`SHA256SUMS`，均已匿名实际下载并核对摘要。仓库已设置 Topics `autumnos-app`、`autumn-app-sq`，根商店展示清单有效。实际商店验证和运行范围见 `docs/TESTING.md`。

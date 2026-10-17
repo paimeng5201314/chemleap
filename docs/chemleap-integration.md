@@ -36,6 +36,6 @@ AutumnOS 商店发现与安装需要同时满足：
 4. 本版本 `channel=stable`，GitHub Release 不标记为 prerelease。这里 stable 是应用版本渠道，不表示 AutumnOS 全部功能或安全验收完成。
 5. 应用 ID、版本、入口、权限、存档格式、字节数和摘要与真实包一致，并满足宿主兼容要求。
 
-本次上传准备了源码、根展示清单和 `dist/` 下载文件。当前连接的 GitHub 工具不提供创建 Release、上传 Release 附件或修改 Topics 的写接口，本机也没有可用的 GitHub 登录凭据，因此这两项尚未完成。发布说明已准备在 `release/v0.1.0/RELEASE_NOTES.md`。直接下载成功与自动商店上架是分别核验的状态。
+2026-10-17 已公开发布 [v0.1.0](https://github.com/paimeng5201314/chemleap/releases/tag/v0.1.0)，Release ID `415671030`，非 prerelease；三个独立附件为 `ChemLeap-0.1.0.autumn`、`autumn.release.json`、`SHA256SUMS`。仓库 Topics 已设置为 `autumnos-app` 与 `autumn-app-sq`。匿名下载三个附件均返回 HTTP 200，字节与摘要匹配，下载后的三层材料通过官方 CLI 校验。更多实际商店验证见 `TESTING.md`。
 
 在具备上述发布条件的宿主中，可以通过商店“打开 GitHub 仓库”或粘贴仓库链接查找真实详情。缺少条件时应显示缺项，不创建假安装任务。现有宿主门禁仍需另行完成，不能靠添加 Topics 或 Release 绕过。
